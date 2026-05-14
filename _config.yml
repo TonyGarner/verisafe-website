@@ -1,11 +1,13 @@
 # Site Settings
 title: Verisafe
-email: info@verisafe.com.au # Update this to your actual email
+baseurl: "/verisafe-website" # This should match your Repo Name
+url: "https://TonyGarner.github.io"
+markdown: kramdown
+email: hello@verisafe.com.au # Update this to your actual email
 description: >- # This helps with Google search results
   Verisafe offers organisations an easy and cost-effective solution for 
   verified Working with Children Check compliance and ongoing monitoring.
-baseurl: "" # Leave empty for now
-url: "http://localhost:4000"
+
 
 # Build Settings
 # theme: minima # Or leave blank if using your custom styles

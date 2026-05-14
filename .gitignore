@@ -1,0 +1,11 @@
+# Jekyll temporary files
+.jekyll-cache/
+.jekyll-metadata
+_site/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# VS Code files
+.vscode/

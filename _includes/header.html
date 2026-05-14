@@ -6,15 +6,11 @@
     </div>
 
     <div class="nav-links">
-        <a href="{{ '/' | relative_url }}"
-            class="{% if page.url == '/' or page.url == '/index.html' %}active{% endif %}">Home</a>
-        <a href="{{ '/about.html' | relative_url }}"
-            class="{% if page.url contains 'about' %}active{% endif %}">About</a>
-        <a href="{{ '/pricing.html' | relative_url }}"
-            class="{% if page.url contains 'pricing' %}active{% endif %}">Pricing</a>
+        <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' or page.url == '/index.html' %}active{% endif %}">Home</a>
+        <a href="{{ '/about.html' | relative_url }}" class="{% if page.url contains 'about' %}active{% endif %}">About</a>
+        <a href="{{ '/pricing.html' | relative_url }}" class="{% if page.url contains 'pricing' %}active{% endif %}">Pricing</a>
         <a href="{{ '/faq.html' | relative_url }}" class="{% if page.url contains 'faq' %}active{% endif %}">FAQ</a>
-        <a href="{{ '/contact.html' | relative_url }}"
-            class="{% if page.url contains 'contact' %}active{% endif %}">Contact</a>
+        <a href="{{ '/contact.html' | relative_url }}" class="{% if page.url contains 'contact' %}active{% endif %}">Contact</a>
     </div>
 
     <div class="nav-auth">
