@@ -108,19 +108,19 @@ nav img {
     right: 0;
     bottom: 0;
     /* Using background-position: top center to crop the bottom */
-    background: linear-gradient(rgba(14, 27, 41, 0.5), rgba(14, 27, 41, 0.5)), url('images/teacher.jpeg') no-repeat;
+    background: linear-gradient(rgba(201, 214, 229, 0.5), rgba(184, 207, 232, 0.5)), url('images/teacher.jpeg') no-repeat;
     background-size: cover;
     background-position: top center;
 
     /* Blur Effect */
-    filter: blur(1px);
+    filter: blur(3px);
     transform: scale(1.1);
     /* Prevents white edges from blur */
     z-index: -1;
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 800;
     margin-bottom: 30px;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
@@ -135,14 +135,14 @@ nav img {
     align-items: center;
     padding: 0 10%;
 }
-
+/* 
 .hero-home h1 {
     color: #ffffff;
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 30px;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-}
+} */
 
 /* New Navy Background Section for H2s */
 .value-prop {
@@ -185,10 +185,8 @@ nav img {
 
 .btn-primary-hero:hover {
     background: #1a7a63;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
-
-
 
 
 
@@ -216,10 +214,50 @@ nav img {
     text-align: center;
 }
 
+/* 1. Header Wrapper to split the block into 2 equal columns */
+.features-header-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 50px; /* Space between the header boxes and the features cards underneath */
+}
+
+/* 2. Left Box: Navy Banner holding the text */
+.features-title-box {
+    background-color: var(--navy);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    min-height: 180px; /* Forces both boxes to look identical in height layout */
+}
+
+/* Overriding the default look of the title to look bright white inside the navy banner */
+.features-title-box h2 {
+    color: #ffffff !important;
+    font-size: 3rem;
+    margin: 0;
+}
+
 .features h2 {
     color: var(--navy);
     font-size: 2.5rem;
     margin-bottom: 50px;
+}
+
+/* 3. Right Box: Holds the soccer image layout seamlessly */
+.features-image-box {
+    border-radius: 12px;
+    overflow: hidden; /* Ensures the image respects the rounded card edges */
+    height: 100%;
+}
+
+.features-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crops image cleanly inside its layout box boundaries */
+    display: block;
 }
 
 .feature-grid {
@@ -244,24 +282,24 @@ nav img {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
 }
 
-/* Feature Icons - Add your icons to images folder */
+/* Feature Icons - Circular Navy Background */
 .feature-icon {
     width: 60px;
     height: 60px;
     margin: 0 auto 20px;
-    background: var(--light-bg);
+    background: var(--navy);       /* Changes the circle background to Navy */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--green);
-    font-size: 1.5rem;
 }
 
-.feature-item h3 {
-    color: var(--navy);
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+/* Formats the icon inside the circle and turns it white */
+.feature-icon img {
+    width: 28px;                   /* Perfect size sizing for line icons */
+    height: 28px;
+    object-fit: contain;
+    filter: invert(1) brightness(2); /* Magic trick: turns black lines into crisp white */
 }
 
 .feature-item p {
@@ -269,6 +307,117 @@ nav img {
     /* Softer text color for descriptions */
     font-size: 1rem;
 }
+
+
+/* How It Works Layout Grid */
+.how-it-works {
+    padding: 100px 10%;
+    background-color: #ffffff;
+}
+
+.how-it-works-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr; /* Slightly larger area layout for text content space */
+    gap: 80px;
+    align-items: flex-start;
+}
+
+/* Left Column Styling */
+.how-content-side h2 {
+    color: var(--navy);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.how-content-side .main-intro {
+    font-size: 1.15rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+/* Content List Rows styling */
+.info-list-item {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e2efeb; /* Soft divider line color */
+}
+
+.info-list-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.info-list-item h3 {
+    color: #1F8A70; /* Brand Green Titles */
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.info-list-item p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.info-list-item a {
+    color: #1F8A70;
+    text-decoration: underline;
+}
+
+/* Right Column: Absolute Monitor Stacking Trick Layout */
+.how-graphic-side {
+    position: relative;
+    width: 100%;
+    margin-top: 40px; /* Aligns visually balanced across from text list body start */
+}
+
+.monitors-wrapper {
+    position: relative;
+    width: 100%;
+    height: 450px; /* Dictates container boundaries for stacked elements */
+}
+
+.monitor {
+    position: absolute;
+    width: 85%; /* Scaled smaller so they overlap inside bounding boxes gracefully */
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
+    transition: transform 0.4s ease;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+/* Micro interaction hover pop effects */
+.monitors-wrapper:hover .monitor-front {
+    transform: translate(5px, -5px) scale(1.05);
+}
+
+/* Clean Responsive Stacking Configurations for Tablets / Mobile Views */
+@media (max-width: 1024px) {
+    .how-it-works-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .monitors-wrapper {
+        height: 380px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
 
 
 
