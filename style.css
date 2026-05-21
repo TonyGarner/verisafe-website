@@ -1,3 +1,8 @@
+/* Universal layout reset - includes padding and borders inside total width */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* CSS Variables for easy color changes */
 :root {
     --navy: #0e1b29;
