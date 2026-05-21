@@ -1,7 +1,7 @@
 # Site Settings
 title: Verisafe
-baseurl: "/verisafe-website" # This should match your Repo Name
-url: "https://TonyGarner.github.io"
+url: "https://verisafe.com.au" # Update this to your actual URL
+baseurl: "" # This should match your Repo Name
 markdown: kramdown
 email: hello@verisafe.com.au # Update this to your actual email
 description: >- # This helps with Google search results
