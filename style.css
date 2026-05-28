@@ -423,89 +423,36 @@ nav img {
 }
 
 
-
-
-
-
-
-
-
-
-/* Pricing Styles */
-.pricing-header {
+/* Reviews section ------------------------------------------ */
+.reviews-section {
+    background-color: #f0f7f5; /* Soft brand-tinted background to break up the white space */
+    padding: 60px 10%;
     text-align: center;
-    padding: 80px 10% 40px;
-    background: var(--light-bg);
+    border-top: 1px solid #e2efeb;
+    border-bottom: 1px solid #e2efeb;
 }
 
-.pricing-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 40px 10% 80px;
-    flex-wrap: wrap;
+.review-container {
+    max-width: 950px;
+    margin: 0 auto;
 }
 
-.pricing-card {
-    background: white;
-    border: 1px solid #ddd;
-    padding: 40px;
-    border-radius: 12px;
-    width: 300px;
-    text-align: center;
-    position: relative;
-    transition: 0.3s;
-}
-
-.pricing-card.featured {
-    border: 2px solid var(--green);
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.pricing-card .badge {
-    background: var(--green);
-    color: white;
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-}
-
-.price {
-    font-size: 3rem;
-    font-weight: bold;
-    margin: 20px 0;
+.review-text {
+    font-size: 1.6rem;
+    font-style: italic;
     color: var(--navy);
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-weight: 500;
 }
 
-.price span {
-    font-size: 1rem;
-    color: #666;
-}
-
-.pricing-card ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 30px;
-    text-align: left;
-}
-
-.pricing-card li {
-    margin-bottom: 10px;
-    padding-left: 25px;
-    position: relative;
-}
-
-.pricing-card li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
+.review-author {
+    font-size: 1.15rem;
+    font-weight: 700;
     color: var(--green);
-    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
 }
 
 
@@ -526,9 +473,9 @@ nav img {
 
 .mission-section h1 {
     color: #fff;
-    font-size: 3rem;
+    font-size: 3.5rem;
+    font-weight: 400;
     margin-bottom: 20px;
-    font-weight: 700;
     /* Added shadow to keep text readable against the raw image */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
@@ -567,7 +514,8 @@ nav img {
 .story-content h2 {
     color: #ffffff;
     /* Contrast against navy */
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    font-weight: 400;
     margin-bottom: 25px;
 }
 
@@ -604,6 +552,7 @@ nav img {
 .section-title {
     color: var(--green);
     font-size: 2.2rem;
+    font-weight: 400;
     margin-bottom: 10px;
 }
 
@@ -722,6 +671,83 @@ nav img {
 
 
 /* Pricing Page Specifics */
+
+.pricing-header {
+    text-align: center;
+    padding: 80px 10% 40px;
+    background: var(--light-bg);
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 10% 80px;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 40px;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    transition: 0.3s;
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--green);
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card .badge {
+    background: var(--green);
+    color: white;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: var(--navy);
+}
+
+.price span {
+    font-size: 1rem;
+    color: #666;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.pricing-card li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.pricing-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: bold;
+}
+
 .stripe-pricing-section {
     padding: 40px 5%;
     background-color: #fff;
@@ -1127,6 +1153,16 @@ html {
     .features-image-box img {
         height: 160px;            /* Slimmer banner profile so your feature items stay close by */
         border-radius: 8px;       /* Slightly tighter radius appropriate for small screens */
+    }
+
+    .reviews-section {
+        padding: 40px 5% !important;
+    }
+    .review-text {
+        font-size: 1.3rem;
+    }
+    .review-author {
+        font-size: 1rem;
     }
 
     /* About ===============================================*/
