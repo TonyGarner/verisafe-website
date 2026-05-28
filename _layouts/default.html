@@ -13,7 +13,12 @@
     {{ content }}
 
     <footer style="background: var(--navy); color: white; text-align: center; padding: 40px 0;">
-        <p>&copy; 2026 Veri<span style="color: var(--green);">Safe</span>. All rights reserved.</p>
+        <p style="margin-bottom: 12px; margin-top: 0;">&copy; 2026 Veri<span style="color: var(--green);">Safe</span>. All rights reserved.</p>
+        <p style="font-size: 0.8rem; margin: 0;">
+            <a href="{{ '/privacy-policy.html' | relative_url }}" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; margin: 0 10px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255, 255, 255, 0.6)'">Privacy Policy</a>
+            <span style="color: rgba(255, 255, 255, 0.3);">|</span>
+            <a href="{{ '/terms-and-conditions.html' | relative_url }}" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; margin: 0 10px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255, 255, 255, 0.6)'">Terms & Conditions</a>
+        </p>
     </footer>
 </body>
 </html>
