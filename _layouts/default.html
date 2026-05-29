@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | VERISAFE</title>
+    {% if page.description %}<meta name="description" content="{{ page.description | escape }}">{% endif %}
     <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
     <link rel="icon" type="image/jpeg" href="{{ '/images/favicon.jpg' | relative_url }}">
 </head>
