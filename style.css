@@ -175,7 +175,6 @@ nav img {
     background: var(--green);
     color: white;
     padding: 15px 40px;
-    margin-bottom: 100px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: 700;
@@ -189,10 +188,39 @@ nav img {
     transform: translateY(-3px);
 }
 
+/* Secondary Button for the Hero */
+.btn-secondary-hero {
+    background: #ffffff;
+    color: #0f1e2e; /* Navy text (or use var(--navy) if defined in your CSS) */
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: 0.3s;
+    border: 2px solid #ffffff;
+}
+
+.btn-secondary-hero:hover {
+    background: #e2e8f0; /* Subtle off-white hover background */
+    color: #0f1e2e;
+    transform: translateY(-3px);
+}
+
+
 
 
 
 /* Buttons */
+.home-buttons {
+    margin-top: 50px;
+    margin-bottom: 80px;
+    display: flex;
+    gap: 50px;
+    justify-content: left;
+}
+
 .btn {
     background: var(--green);
     color: white;
