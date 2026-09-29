@@ -1125,10 +1125,8 @@ VERI-SAFE accepts no liability for any loss, damage or non-compliance arising fr
       })
       .then(function (res) {
         if (res.ok) {
-          if (isAuto) {
-            submitStatus.textContent = 'Your assessment has been recorded.';
-          } else {
-            submitStatus.textContent = 'Thanks. We will be in touch soon.';
+          if (!isAuto) {
+            submitStatus.textContent = 'We will be in touch soon.';
             sendReportBtn.textContent = 'Sent';
           }
           submitStatus.classList.add('success');
