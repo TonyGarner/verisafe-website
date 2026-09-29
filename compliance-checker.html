@@ -1089,10 +1089,10 @@ VERI-SAFE accepts no liability for any loss, damage or non-compliance arising fr
       if (!isAuto) {
         sendReportBtn.disabled = true;
         sendReportBtn.textContent = 'Sending...';
-        submitStatus.textContent = 'Sending your details...';
+        submitStatus.textContent = '';
         submitStatus.className = 'vs-submit-status';
       } else {
-        submitStatus.textContent = 'Saving your assessment...';
+        submitStatus.textContent = '';
         submitStatus.className = 'vs-submit-status';
       }
 
@@ -1123,30 +1123,25 @@ VERI-SAFE accepts no liability for any loss, damage or non-compliance arising fr
         },
         body: JSON.stringify(payload)
       })
-      // .then(function (res) {
-      //   if (res.ok) {
-      //     if (!isAuto) {
-      //       submitStatus.textContent = 'Your assessment has been recorded.';
-      //     } else {
-      //       submitStatus.textContent = 'Thanks. We will be in touch soon.';
-      //       sendReportBtn.textContent = 'Sent';
-      //     }
-      //     submitStatus.classList.add('success');
-      //   } else {
-      //     return res.json().then(function (data) {
-      //       throw new Error(data.error || 'Submission failed');
-      //     });
-      //   }
-      // })
-      .catch(function () {
-        if (isAuto) {
-          submitStatus.textContent = 'Assessment shown. Contact details could not be saved automatically.';
+      .then(function (res) {
+        if (res.ok) {
+          if (!isAuto) {
+            sendReportBtn.textContent = 'Sent';
+          }
+          // Leave status text completely blank after submission
+          submitStatus.textContent = '';
         } else {
-          submitStatus.textContent = 'We could not send your details right now. Please try again.';
+          return res.json().then(function (data) {
+            throw new Error(data.error || 'Submission failed');
+          });
+        }
+      })
+      .catch(function () {
+        if (!isAuto) {
           sendReportBtn.disabled = false;
           sendReportBtn.textContent = 'Contact me';
         }
-        submitStatus.classList.add('error');
+        submitStatus.textContent = '';
       });
     }
 
