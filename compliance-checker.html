@@ -1123,19 +1123,21 @@ VERI-SAFE accepts no liability for any loss, damage or non-compliance arising fr
         },
         body: JSON.stringify(payload)
       })
-      .then(function (res) {
-        if (res.ok) {
-          if (!isAuto) {
-            submitStatus.textContent = 'We will be in touch soon.';
-            sendReportBtn.textContent = 'Sent';
-          }
-          submitStatus.classList.add('success');
-        } else {
-          return res.json().then(function (data) {
-            throw new Error(data.error || 'Submission failed');
-          });
-        }
-      })
+      // .then(function (res) {
+      //   if (res.ok) {
+      //     if (!isAuto) {
+      //       submitStatus.textContent = 'Your assessment has been recorded.';
+      //     } else {
+      //       submitStatus.textContent = 'Thanks. We will be in touch soon.';
+      //       sendReportBtn.textContent = 'Sent';
+      //     }
+      //     submitStatus.classList.add('success');
+      //   } else {
+      //     return res.json().then(function (data) {
+      //       throw new Error(data.error || 'Submission failed');
+      //     });
+      //   }
+      // })
       .catch(function () {
         if (isAuto) {
           submitStatus.textContent = 'Assessment shown. Contact details could not be saved automatically.';
